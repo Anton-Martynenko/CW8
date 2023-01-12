@@ -1,0 +1,14 @@
+export function movie(card: number, ticket: number, perc: number): number {
+  var i = 1
+    var x = ticket * perc
+    var systemA = ticket * i
+    var systemB = card + x
+    while (Math.ceil(systemB) >= systemA) {
+        i++
+        x *= perc
+        systemA = ticket * i
+        systemB += x
+        
+    }
+    return i
+}
