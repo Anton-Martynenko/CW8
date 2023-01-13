@@ -1,0 +1,12 @@
+export function getSum(a: number, b: number): number {
+  const start = a < b ? a : b;
+  const end = start === a ? b : a;
+  
+  let sum = 0;
+  
+  for (let i = start; i <= end; i++) {
+    sum += i;
+  }
+  
+  return sum;
+}
