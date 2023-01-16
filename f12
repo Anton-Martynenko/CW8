@@ -1,0 +1,4 @@
+export function solution(start: number, finish: number) {
+  const difference = finish - start;
+  return Math.floor(difference / 3) + difference % 3;
+}
