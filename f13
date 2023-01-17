@@ -1,0 +1,10 @@
+export function generateShape(int: number): string {
+  let amount = "";
+        for (let i =0 ; i < int; i++){
+               for (let j = 1; j <= int; j++){
+               amount +=("+");
+              }
+        amount += "\n";
+            }
+return amount.trim();
+}
