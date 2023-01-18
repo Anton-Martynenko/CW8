@@ -1,0 +1,20 @@
+export class G964 {
+    public static nbDig(n: number, d: number): number {
+      let arrOfSq = [];
+      
+  for (let i = 0; i <= n; i++){
+    let sqNumber = i * i;
+    arrOfSq.push(sqNumber);
+  }
+      
+  let dCount = 0;
+      let newArr = arrOfSq.join("").split("");
+      newArr.map((digit) => {
+        if (digit === d.toString()) {
+          return (dCount += 1)
+        }
+        return;
+      })
+  return dCount;
+}  
+}
