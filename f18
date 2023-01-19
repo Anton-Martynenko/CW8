@@ -1,0 +1,10 @@
+export function partlist(arr: string[]): string[][] {
+  let result = [];
+  for (let i = 1; i < arr.length; i++) {
+    let subResult = [];
+    subResult.push(arr.slice(0, i).join(' '));
+    subResult.push(arr.slice(i).join(' ' ));
+    result.push(subResult);
+  }
+  return result;
+}
