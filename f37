@@ -1,0 +1,5 @@
+function removeSmallest(numbers) {
+  const smallestIndex = numbers.indexOf(Math.min(...numbers));
+  return [...numbers.slice(0, smallestIndex), 
+         ...numbers.slice(smallestIndex + 1)]
+}
