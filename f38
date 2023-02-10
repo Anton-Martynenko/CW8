@@ -1,0 +1,8 @@
+function removeSmallest(numbers) {
+  const smallestIndex = numbers.indexOf(Math.min(...numbers));
+  const newArray = [];
+  numbers.forEach((number, i) => {
+    if (i !== smallestIndex) newArray.push(number);
+  });
+  return newArray;
+}
