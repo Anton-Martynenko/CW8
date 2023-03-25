@@ -1,0 +1,10 @@
+function missingWord(nums, str) {
+  let result = []
+  let x = str.split(" ").join("")
+  let y = nums.sort(function(a,b){return a-b})
+    if(y[2]>x.length) return "No mission today"
+      result.push(x.charAt(y[0]))
+      result.push(x.charAt(y[1]))
+      result.push(x.charAt(y[2]))
+    return result.join("").toLowerCase() 
+}
