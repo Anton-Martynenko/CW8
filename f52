@@ -1,0 +1,3 @@
+function sumNoDuplicates(numList) {
+  return numList.filter((i)=> numList.indexOf(i) == numList.lastIndexOf(i)).reduce((a,b)=> a + b, 0)
+}
