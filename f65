@@ -1,0 +1,14 @@
+function insertDash(num) {
+   let result = [];
+    var num = num.toString().split("");
+    for (let i = 0; i < num.length; i++) {
+        let currentNum = num[i];
+        let nextNum = num[i + 1];
+        if (currentNum % 2 === 1 && nextNum % 2 === 1) {
+            result.push(num[i] + '-');
+        } else {
+            result.push(num[i]);
+        }
+    }
+    return (result.join(''))
+}
