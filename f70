@@ -1,0 +1,25 @@
+function validParentheses(parenStr) {
+  if(parenStr === '')
+    return true;
+  
+  // left is '(' and right is ')'
+  let left = 0;
+  let right = 0;
+  
+  
+  for(let i = 0; i < parenStr.length; i++) {
+    let char = parenStr[i];
+    
+    if(char === "(") {
+      left++
+    } else {
+      right++
+    }
+    
+    if(right > left) {
+      return false
+    }
+  }
+  
+  return left === right
+}
