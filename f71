@@ -1,0 +1,3 @@
+function arrayPacking(a) {
+  return a.reduceRight((a,b)=>a*256+b);
+}
