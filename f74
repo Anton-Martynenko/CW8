@@ -1,0 +1,12 @@
+function dotCalculator (equation) {
+	let arr = equation.split(' ');
+  if (arr[1] == "+") {
+    return '.'.repeat(arr[0].length + arr[2].length); 
+  } else if (arr[1] == "-") {
+      return '.'.repeat(arr[0].length - arr[2].length);         
+  }  else if (arr[1] == "*") {
+      return '.'.repeat(arr[0].length * arr[2].length);         
+  }  else {
+    return '.'.repeat(arr[0].length / arr[2].length);
+  }
+}
