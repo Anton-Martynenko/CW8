@@ -1,0 +1,21 @@
+function findEvenIndex(arr)
+{
+  let sum = 0,
+    leftSum = 0;
+
+  for (item of arr) {
+    sum += item;
+  }
+
+  for (let [index, item] of arr.entries()) {
+    sum -= item;
+
+    if (leftSum === sum) {
+      return index;
+    }
+
+    leftSum += item;
+  }
+
+  return -1;
+}
