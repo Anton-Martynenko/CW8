@@ -1,0 +1,15 @@
+function twistedSum(n) {
+  let sum = 0;
+  for(let x = 0; x <= n; x++) {
+    let numString = x+'';
+    if(numString.length == 1) {
+      sum+=+numString;
+      } else {
+        let ss = numString.split('');
+        ss.forEach(digit => {
+          sum+=+digit;
+        })
+      }
+    }
+  return sum;
+}
