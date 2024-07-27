@@ -1,0 +1,7 @@
+function peacefulYard(yard, minDistance) {
+    for(var pos=[],i=0;i<yard.length;i++)for(var j=0;j<yard[0].length;j++) if(yard[i][j]!="-") pos.push([i,j])
+    return pos.every(x => 
+        Math.min(...pos.map(y => 
+        (Math.pow(x[0] - y[0],2) + Math.pow(x[1] - y[1],2)) 
+        || minDistance * minDistance)) >= minDistance * minDistance);
+}
