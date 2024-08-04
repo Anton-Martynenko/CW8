@@ -1,0 +1,13 @@
+//Return true if point is inside poly, and false if it is not
+function pointInPoly(poly, point) {
+  let result = false;
+  let [x, y] = point;
+  let len = poly.length;  
+    for (let i = 0, xi, yi, xj, yj, j = len - 1; i < len; j = i++) {
+        [xi, yi] = poly[i];
+        [xj, yj] = poly[j];
+        if (((yi > y) != (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)) 
+        result = !result;
+    }
+  return result;
+}
