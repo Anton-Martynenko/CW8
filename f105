@@ -1,0 +1,8 @@
+function mixwords(str){
+  if (typeof str === 'string'){
+     return str.replace(/[a-z]+/gi,v => {
+     if (v.length > 2) return v.slice(0, 1) + v.slice(1, -1).split``.sort((a, b) => Math.random()-0.5).join`` + v.slice(-1)
+     return v;
+     })
+   }
+};
