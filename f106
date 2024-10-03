@@ -1,0 +1,13 @@
+function insertMissingLetters (str){
+  let uniq = [...new Set(str.split``)].join``;
+  let arr = [];
+  let dict = 'abcdefghijklmnopqrstuvwxyz';
+  for (let i = 0; i < uniq.length; i++){
+    arr.push(uniq[i] + dict.slice(dict.indexOf(uniq[i])).replace(new RegExp(`[${uniq}]`,'gi'),'').toUpperCase());
+  }
+  let result = str.slice();
+  for (let i = 0; i < uniq.length; i++){
+    result = result.replace(new RegExp(uniq[i]),arr[i]);
+  }
+  return result;
+}
